@@ -33,8 +33,8 @@ Before running the application, ensure you have the following installed on your 
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/lms-project.git](https://github.com/your-username/lms-project.git)
-   cd lms-project
+   git clone [https://github.com/CodeWin04/LMS_ETEH.git](https://github.com/CodeWin04/LMS_ETEH.git)
+   cd lms-eteh
 
 
    # Windows (PowerShell / Command Prompt)
@@ -44,7 +44,6 @@ python -m venv venv
 # macOS / Linux
 python3 -m venv venv
 source venv/bin/activate
-
 
 
 pip install -r requirements.txt
