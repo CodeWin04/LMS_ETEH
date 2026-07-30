@@ -322,7 +322,7 @@ body {
 }
 
 .feature-card p {
-    background: var(--primary-color);
+    background: #efefef;
     border: 1px solid var(--card-border);
     border-radius: var(--radius-md);
     color: white;
