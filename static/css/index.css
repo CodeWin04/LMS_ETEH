@@ -1,1 +1,22 @@
-
+:root {
+    /* Primary Accent (Vibrant Orange) */
+    --primary-color: #f97316;
+    --primary-hover: #ea580c;
+    
+    /* Secondary Accent (Cyan/Teal highlight) */
+    --accent-color: #38bdf8;
+    
+    /* Dark Navy Backgrounds */
+    --bg-dark: #0a1120;        /* Deep Navy */
+    --card-bg: #131f37;       /* Mid Navy for Cards */
+    --card-border: #233558;   /* Subtle Navy Border */
+    
+    /* Text & Radius */
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
