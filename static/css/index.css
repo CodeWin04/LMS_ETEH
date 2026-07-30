@@ -322,7 +322,7 @@ body {
 }
 
 .feature-card p {
-    background: #efefef;
+    background: #cfcfcf;
     border: 1px solid var(--card-border);
     border-radius: var(--radius-md);
     color: var(--text-white);
@@ -357,7 +357,7 @@ body {
 }
 
 .course-card p, .feature-card p {
-    color: var(--text-secondary);
+    color: var(--text-white);
     font-size: 0.95rem;
     margin-bottom: 24px;
 }
