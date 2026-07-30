@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset = "UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edutech</title> 
+    <link rel="image" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>   
+    <header id = "header">        
+            <h3 id = "logo">
+                <img src = "" alt = "" id = "my-logo">
+            </h3>
+        </div>
+        <nav>
+            <ul class="topnav">
+                <li><a class="active" href = "index.php">Devlava Inc</a></li>                
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="right"><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main">
+        <div id="client-area">
+            <div id = "auth">
+            <!-- Login & Signup -->
+            <div class = "auth_btns">
+                    <button id="toggleLogin">Login</button>
+                    <button id="toggleSignup">Subscribe</button>
+            </div>
+                
+            <form id="loginForm" action = "index.php" method = "POST">
+                <h3>Login</h3>
+                <input type = 'text' name = 'accountname' id = 'accname' placeholder = 'Email' required>
+                <input type = 'text' name ='username' id = 'uname' placeholder = 'Username' required>
+                <input type = 'password' name = 'password' id = 'pword' placeholder = 'Password' required>
+                <input type = 'submit' value = 'Log in!'> 
+            </form>
+
+            <form id="subscription" action = "index.php" method = "POST">                
+                <select name = 'plan' required>
+                <option value = ''>Select subscription</option>                
+                <option value = 'cbt/result'>CBT/Result and Database Management</option>
+                <option value= 'cbt'>CBT Management</option>
+                <option value= 'result'>Result Management</option>
+                </select>
+                
+                
+                <select name = 'session' required>
+                <option value = ''>Select Session</option>                
+                <option value = '2025/2026'>2025/2026</option>
+                <option value= '2026/2027'>2026/2027</option>
+                <option value= '2027/2028'>2027/2028</option>
+                <option value= '2028/2029'>2028/2029</option>
+                <option value= '2029/2030'>2029/2030</option>
+                <option value= '2030/2031'>2030/2031</option>
+                <option value= '2031/2032'>2031/2032</option>
+                </select>
+                <input type = 'text' name = 'sitename' id = 'sitename' placeholder = 'Site name' required>
+                <input type= 'submit' value = 'Subscribe'>
+                
+            </form>
+
+            <script>                
+                const toggleLogin = document.getElementById("toggleLogin");
+                const toggleSignup = document.getElementById("toggleSignup");
+                const loginForm = document.getElementById("loginForm");
+                const subscription = document.getElementById("subscription");
+
+                toggleLogin.onclick = function(){              
+                    if(loginForm.style.display =="none" || loginForm.style.display ==""){
+                        loginForm.style.display ="block";
+                        subscription.style.display= "none";
+                        //alert(loginForm.style.display);
+                    }else if(loginForm.style.display =="block"){
+                    loginForm.style.display ="none";
+                    }
+                }
+
+                toggleSignup.addEventListener("click", function(){
+                if(subscription.style.display =="none" || subscription.style.display ==""){
+                        subscription.style.display ="block";
+                        loginForm.style.display ="none";
+                        //alert(loginForm.style.display);
+                    }else if(subscription.style.display =="block"){
+                    subscription.style.display ="none";
+                    }
+                });
+            </script>
+            </div>
+            <div class="ads">
+                <div class="ad">
+                    <b><a href = "#international"></a>Join our international programmes</a></b>
+                </div>
+                <div class="ad">
+                    <b><a href = "#international"></a>Join our international programmes</a></b>
+                </div>
+                <div class="ad">
+                    <b><a href = "#international"></a>Join our international programmes</a></b>
+                </div>
+                <div class="ad">
+                    <b><a href = "#international"></a>Join our international programmes</a></b>
+                </div>
+                
+            </div>
+        </div>
+    </div>        
+
+    <footer id="footer">
+        <div class="footer-container">
+            <p><strong>Devlava</strong> &copy; <?php echo date("Y"); ?>. All rights reserved.</p>
+            <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="mailto:info@devlava.com">info@devlava.com</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>        
+    </script>
+</body>
+</html>
