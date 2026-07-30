@@ -21,6 +21,7 @@
     --text-primary: #0f172a;     /* Deep Navy / Dark Slate Text */
     --text-secondary: #475569;   /* Readable Mid-Gray Subtitles */
     --text-muted: #94a3b8;       /* Light Muted Gray */
+    --text-light: #349af3;       /* Light blue */
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 20px;
@@ -323,6 +324,7 @@ body {
     background: var(--navy-mid);
     border: 1px solid var(--card-border);
     border-radius: var(--radius-md);
+    color: var(--light-blue);
     padding: 32px;
     transition: var(--transition);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
