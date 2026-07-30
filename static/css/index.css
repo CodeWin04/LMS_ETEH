@@ -319,6 +319,15 @@ body {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
 }
 
+.feature-card:nth-child(2) {
+    background: var(--navy-mid);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+}
+
 .feature-card:hover, .course-card:hover {
     transform: translateY(-4px);
     border-color: var(--primary-color);
