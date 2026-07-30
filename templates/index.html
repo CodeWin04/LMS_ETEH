@@ -1,127 +1,225 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
-    <meta charset = "UTF-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edutech</title> 
-    <link rel="image" href="images/favicon.ico" type="image/x-icon">
+    <meta name="description" content="A modern Learning Management System to elevate your skills and track your educational progress.">
+    <title>LearnPulse | Modern Learning Management System</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>   
-    <header id = "header">        
-            <h3 id = "logo">
-                <img src = "" alt = "" id = "my-logo">
-            </h3>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('index') }}" class="brand-logo">
+                <span class="logo-icon">🎓</span> LearnPulse
+            </a>
+            
+            <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#features">Features</a>
+                <a href="#courses">Courses</a>
+                <a href="#auth">Account</a>
+                <div class="nav-auth-buttons">
+                    <a href="#auth" class="btn btn-secondary" onclick="switchTab('signin')">Sign In</a>
+                    <a href="#auth" class="btn btn-primary" onclick="switchTab('signup')">Get Started</a>
+                </div>
+            </nav>
         </div>
-        <nav>
-            <ul class="topnav">
-                <li><a class="active" href = "index.php">Devlava Inc</a></li>                
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="right"><a href="#about">About</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <div id="main">
-        <div id="client-area">
-            <div id = "auth">
-            <!-- Login & Signup -->
-            <div class = "auth_btns">
-                    <button id="toggleLogin">Login</button>
-                    <button id="toggleSignup">Subscribe</button>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="badge">Next-Gen LMS Platform</span>
+                    <h1>Unlock Your Potential with Guided Learning</h1>
+                    <p>Access structured courses, track your interactive assignments, and master new skills with real-time feedback—all in one place.</p>
+                    <div class="hero-actions">
+                        <a href="#courses" class="btn btn-primary btn-large">Browse Courses</a>
+                        <a href="#auth" class="btn btn-outline btn-large" onclick="switchTab('signup')">Join Now</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="preview-card">
+                        <div class="card-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="card-body">
+                            <p class="code-snippet"><code>class LMSCourse:<br>&nbsp;&nbsp;def learn(self):<br>&nbsp;&nbsp;&nbsp;&nbsp;return "Knowledge Unlocked 🚀"</code></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-                
-            <form id="loginForm" action = "index.php" method = "POST">
-                <h3>Login</h3>
-                <input type = 'text' name = 'accountname' id = 'accname' placeholder = 'Email' required>
-                <input type = 'text' name ='username' id = 'uname' placeholder = 'Username' required>
-                <input type = 'password' name = 'password' id = 'pword' placeholder = 'Password' required>
-                <input type = 'submit' value = 'Log in!'> 
-            </form>
+        </section>
 
-            <form id="subscription" action = "index.php" method = "POST">                
-                <select name = 'plan' required>
-                <option value = ''>Select subscription</option>                
-                <option value = 'cbt/result'>CBT/Result and Database Management</option>
-                <option value= 'cbt'>CBT Management</option>
-                <option value= 'result'>Result Management</option>
-                </select>
-                
-                
-                <select name = 'session' required>
-                <option value = ''>Select Session</option>                
-                <option value = '2025/2026'>2025/2026</option>
-                <option value= '2026/2027'>2026/2027</option>
-                <option value= '2027/2028'>2027/2028</option>
-                <option value= '2028/2029'>2028/2029</option>
-                <option value= '2029/2030'>2029/2030</option>
-                <option value= '2030/2031'>2030/2031</option>
-                <option value= '2031/2032'>2031/2032</option>
-                </select>
-                <input type = 'text' name = 'sitename' id = 'sitename' placeholder = 'Site name' required>
-                <input type= 'submit' value = 'Subscribe'>
-                
-            </form>
-
-            <script>                
-                const toggleLogin = document.getElementById("toggleLogin");
-                const toggleSignup = document.getElementById("toggleSignup");
-                const loginForm = document.getElementById("loginForm");
-                const subscription = document.getElementById("subscription");
-
-                toggleLogin.onclick = function(){              
-                    if(loginForm.style.display =="none" || loginForm.style.display ==""){
-                        loginForm.style.display ="block";
-                        subscription.style.display= "none";
-                        //alert(loginForm.style.display);
-                    }else if(loginForm.style.display =="block"){
-                    loginForm.style.display ="none";
-                    }
-                }
-
-                toggleSignup.addEventListener("click", function(){
-                if(subscription.style.display =="none" || subscription.style.display ==""){
-                        subscription.style.display ="block";
-                        loginForm.style.display ="none";
-                        //alert(loginForm.style.display);
-                    }else if(subscription.style.display =="block"){
-                    subscription.style.display ="none";
-                    }
-                });
-            </script>
+        <!-- Features Section -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Everything You Need to Excel</h2>
+                    <p>Designed for students, built for instructors.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>Structured Modules</h3>
+                        <p>Organized lessons, video tutorials, and interactive reading materials designed step-by-step.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📈</div>
+                        <h3>Progress Analytics</h3>
+                        <p>Real-time visual tracking lets you see how far you've come and what to focus on next.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📝</div>
+                        <h3>Smart Quizzes</h3>
+                        <p>Instant automated grading and feedback on your assessments to solidify your understanding.</p>
+                    </div>
+                </div>
             </div>
-            <div class="ads">
-                <div class="ad">
-                    <b><a href = "#international"></a>Join our international programmes</a></b>
-                </div>
-                <div class="ad">
-                    <b><a href = "#international"></a>Join our international programmes</a></b>
-                </div>
-                <div class="ad">
-                    <b><a href = "#international"></a>Join our international programmes</a></b>
-                </div>
-                <div class="ad">
-                    <b><a href = "#international"></a>Join our international programmes</a></b>
-                </div>
-                
-            </div>
-        </div>
-    </div>        
+        </section>
 
-    <footer id="footer">
-        <div class="footer-container">
-            <p><strong>Devlava</strong> &copy; <?php echo date("Y"); ?>. All rights reserved.</p>
-            <ul class="footer-links">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Cookies</a></li>
-            <li><a href="#">Newsletter</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="mailto:info@devlava.com">info@devlava.com</a></li>
-            </ul>
+        <!-- Featured Courses Preview -->
+        <section class="courses-section" id="courses">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Explore Top Courses</h2>
+                    <p>Start learning immediately with our featured tracks.</p>
+                </div>
+                <div class="courses-grid">
+                    <!-- Course 1 -->
+                    <article class="course-card">
+                        <div class="course-badge">Development</div>
+                        <h3>Full-Stack Web Development</h3>
+                        <p>Master modern web architectures, API design, and database integration.</p>
+                        <div class="course-footer">
+                            <span>12 Modules</span>
+                            <a href="#auth" class="btn-link" onclick="switchTab('signup')">Enroll Now &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Course 2 -->
+                    <article class="course-card">
+                        <div class="course-badge">Data Science</div>
+                        <h3>Python & Data Engineering</h3>
+                        <p>Learn core data processing, algorithmic analysis, and visualization tools.</p>
+                        <div class="course-footer">
+                            <span>8 Modules</span>
+                            <a href="#auth" class="btn-link" onclick="switchTab('signup')">Enroll Now &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Course 3 -->
+                    <article class="course-card">
+                        <div class="course-badge">DevOps</div>
+                        <h3>System Architecture & Linux</h3>
+                        <p>Understand server automation, networking essentials, and cloud deployment.</p>
+                        <div class="course-footer">
+                            <span>10 Modules</span>
+                            <a href="#auth" class="btn-link" onclick="switchTab('signup')">Enroll Now &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Authentication Section (Sign In / Sign Up) -->
+        <section class="auth-section" id="auth">
+            <div class="container auth-container">
+                <div class="auth-card">
+                    <div class="auth-tabs">
+                        <button class="auth-tab active" id="tab-signin" onclick="switchTab('signin')">Sign In</button>
+                        <button class="auth-tab" id="tab-signup" onclick="switchTab('signup')">Create Account</button>
+                    </div>
+
+                    <!-- Sign In Form -->
+                    <form id="form-signin" class="auth-form active-form" action="{{ url_for('index') }}" method="POST">
+                        <h3>Welcome Back</h3>
+                        <p class="auth-subtitle">Sign in to access your dashboard and continue learning.</p>
+                        
+                        <div class="form-group">
+                            <label for="signin-email">Email Address</label>
+                            <input type="email" id="signin-email" name="email" placeholder="e.g. alex@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signin-password">Password</label>
+                            <input type="password" id="signin-password" name="password" placeholder="••••••••" required>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="remember-me">
+                                <input type="checkbox" name="remember"> Remember me
+                            </label>
+                            <a href="#" class="forgot-link">Forgot password?</a>
+                        </div>
+
+                        <button type="submit" name="action" value="login" class="btn btn-primary btn-full">Sign In</button>
+                    </form>
+
+                    <!-- Sign Up Form -->
+                    <form id="form-signup" class="auth-form" action="{{ url_for('index') }}" method="POST">
+                        <h3>Get Started Free</h3>
+                        <p class="auth-subtitle">Join LearnPulse to enroll in courses and track your achievements.</p>
+                        
+                        <div class="form-group">
+                            <label for="signup-fullname">Full Name</label>
+                            <input type="text" id="signup-fullname" name="fullname" placeholder="e.g. Alex Johnson" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signup-email">Email Address</label>
+                            <input type="email" id="signup-email" name="email" placeholder="e.g. alex@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signup-role">I want to join as a:</label>
+                            <select id="signup-role" name="role" required>
+                                <option value="student" selected>Student</option>
+                                <option value="instructor">Instructor</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" name="password" placeholder="Minimum 8 characters" required>
+                        </div>
+
+                        <button type="submit" name="action" value="register" class="btn btn-primary btn-full">Create Account</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 LearnPulse LMS. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Support</a>
+            </div>
         </div>
     </footer>
-    <script>        
-    </script>
+
+    <!-- Link to External JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
