@@ -37,7 +37,7 @@
 
 /* Responsive Scaling for Smaller Screens */
 @media (max-width: 576px) {
-    .logo-img {
+    .logo-icon {
         width: 28px;
         height: 28px;
     }
