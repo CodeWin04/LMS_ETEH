@@ -22,7 +22,7 @@
     --text-secondary: #475569;   /* Readable Mid-Gray Subtitles */
     --text-muted: #94a3b8;       /* Light Muted Gray */
     --text-light: #2f9ff2;       /* Light blue */
-    --text-white: #ffffff;       /* White text */
+    --text-white: white;         /* White text */
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 20px;
@@ -328,7 +328,7 @@ body {
     color: var(--text-white);
     padding: 32px;
     transition: var(--transition);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 6px -1px rgba(255, 255, 0, 0.05);
 }
 
 .feature-card:hover, .course-card:hover {
