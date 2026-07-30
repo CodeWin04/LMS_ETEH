@@ -232,7 +232,7 @@ body {
     color: var(--navy-dark);
 }
 
-.hero-content p {
+.hero-content a {
     font-size: 1.125rem;
     color: var(--text-secondary);
     margin-bottom: 32px;
@@ -302,7 +302,7 @@ body {
     margin-bottom: 12px;
 }
 
-.section-header p {
+.section-header a {
     color: var(--text-secondary);
 }
 
