@@ -5,8 +5,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    text-decoration: none;
-    background: red;
+    text-decoration: none;    
 }
 
 .logo-icon {
