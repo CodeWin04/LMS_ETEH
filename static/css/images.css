@@ -1,1 +1,48 @@
+/* ==========================================================================
+   Responsive Image Logo in <span>
+   ========================================================================== */
+.brand-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
 
+.logo-img {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-image: url('../images/logo.png'); /* Adjust path to your logo asset */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0; /* Prevents logo from squishing on small screens */
+    transition: var(--transition);
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--navy-dark);
+}
+
+/* Optional: SVG Mask trick if you want an SVG logo to inherit your theme colors */
+/*
+.logo-img {
+    background-color: var(--primary-color);
+    -webkit-mask: url('../images/logo.svg') no-repeat center / contain;
+    mask: url('../images/logo.svg') no-repeat center / contain;
+}
+*/
+
+/* Responsive Scaling for Smaller Screens */
+@media (max-width: 576px) {
+    .logo-img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
+}
