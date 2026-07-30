@@ -2,6 +2,7 @@
  * Tab Switcher for Sign In / Sign Up Forms
  * @param {string} tabName - 'signin' or 'signup'
  */
+alert("I am working!");
 function switchTab(tabName) {
     const signInTab = document.getElementById('tab-signin');
     const signUpTab = document.getElementById('tab-signup');
