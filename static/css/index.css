@@ -21,7 +21,7 @@
     --text-primary: #0f172a;     /* Deep Navy / Dark Slate Text */
     --text-secondary: #475569;   /* Readable Mid-Gray Subtitles */
     --text-muted: #94a3b8;       /* Light Muted Gray */
-    --text-light: #2f8ff3;       /* Light blue */
+    --text-light: #2f9ff2;       /* Light blue */
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 20px;
@@ -321,7 +321,7 @@ body {
 }
 
 .feature-card p {
-    background: var(--navy-mid);
+    background: var(--primary-color);
     border: 1px solid var(--card-border);
     border-radius: var(--radius-md);
     color: var(--text-light);
