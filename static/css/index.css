@@ -320,11 +320,11 @@ body {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
 }
 
-.feature-card:last-child {
+.feature-card, p {
     background: var(--navy-mid);
     border: 1px solid var(--card-border);
     border-radius: var(--radius-md);
-    color: var(--light-blue);
+    color: var(--text-light);
     padding: 32px;
     transition: var(--transition);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
