@@ -232,9 +232,9 @@ body {
     color: var(--navy-dark);
 }
 
-.hero-content a {
+.hero-content p {
     font-size: 1.125rem;
-    color: var(--text-secondary);
+    color: var(--text-white);
     margin-bottom: 32px;
 }
 
@@ -302,8 +302,8 @@ body {
     margin-bottom: 12px;
 }
 
-.section-header a {
-    color: var(--text-secondary);
+.section-header p {
+    color: var(--text-white);
 }
 
 .features-grid, .courses-grid {
@@ -325,7 +325,7 @@ body {
     background: #efefef;
     border: 1px solid var(--card-border);
     border-radius: var(--radius-md);
-    color: white;
+    color: var(--text-white);
     padding: 32px;
     transition: var(--transition);
     box-shadow: 0 4px 6px -1px rgba(255, 255, 0, 0.05);
