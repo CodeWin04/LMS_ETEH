@@ -325,7 +325,7 @@ body {
     background: var(--bg-light);
     border: 1px solid var(--card-border);
     border-radius: var(--radius-md);
-    color: var(--text-primary);
+    color: var(--navy-dark);
     padding: 32px;
     transition: var(--transition);
     box-shadow: 0 4px 6px -1px rgba(2, 2, 2, 0.05);
