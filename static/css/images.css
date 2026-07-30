@@ -20,12 +20,6 @@
     transition: var(--transition);
 }
 
-.logo-text {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--navy-dark);
-}
-
 /* Optional: SVG Mask trick if you want an SVG logo to inherit your theme colors */
 /*
 .logo-img {
@@ -40,9 +34,5 @@
     .logo-icon {
         width: 28px;
         height: 28px;
-    }
-
-    .logo-text {
-        font-size: 1.1rem;
     }
 }
